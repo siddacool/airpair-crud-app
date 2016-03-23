@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+        <% blobs.forEach(function(blob){ %>
+           <li>
+               <span> <%= blob.name %> </span>
+               <span><%= blob.badge %></span>
+               <span><%= blob.dob %></span>
+               <span><%= blob.isloved %></span>
+               <span><%= blob._id %></span>
+               <form action='/blobs/#{blob._id}/edit' method='post' enctype='application/x-www-form-urlencoded'>
+                   
+                   <input type='hidden' value='DELETE' name='_method'>
+                   <button type='submit'>Delete</button>
+               </form>
+               <p> <a href='/blobs/<%= blob._id %>/edit'>Edit</a> </p>
+               <p> <a href='/blobs/<%= blob._id %>'>Show</a> </p>
+           </li>
+        <% }); %>
+    </ul>
+  </body>
+</html>

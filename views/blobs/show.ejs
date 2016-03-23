@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1> <%= blob.name %></h1>
+    <p>
+        Infophoto id: <strong> <%= blob._id %> </strong> 
+    </p>
+    <p>
+        Badge : <%= blob.badge %>
+    </p>
+    <p>
+        DOB : <%= blobdob %>
+    </p>
+    <p>
+        Is Loved : 
+        <% if (blob.isloved === true){%>
+            true
+        <% } else {%>
+            false
+        <% } %>
+    </p>
+  </body>
+</html>

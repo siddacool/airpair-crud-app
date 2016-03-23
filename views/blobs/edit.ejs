@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1>Blob ID <%= blob._id %></h1>
+    <form action='/blobs/<%= blob._id %>/edit' method='post' name='updateblob' enctype='application/x-www-form-urlencoded'>
+       <p>
+           Name:
+           <input type="text" id="inputName" value='<%= blob.name %>' name='name'>
+       </p>
+       <p>
+           Badge:
+           <input type="number" id="inputBadge" value='<%= blob.badge %>' name='badge'>
+       </p>
+       <p>
+           DOB:
+           <input type="date" id="inputDob" value='<%= blobdob %>' name='dob'>
+       </p>
+        <p>
+           Are you Loved?:
+           <input type="checkbox" id="inputDob" name='isloved' <% if (blob.isloved === true){%> checked <% } %> >
+       </p>
+       <p>
+           <input type="hidden" value="PUT" name="_method">
+       </p>
+       <p>
+           <button id="btnSubmit" type="submit">
+               Update
+           </button>
+       </p>
+    </form>
+  </body>
+</html>

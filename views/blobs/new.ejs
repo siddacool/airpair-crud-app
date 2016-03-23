@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form id="formAddBlob" name="addblob" method="post" action="/blobs">
+        <p>
+            Name:
+            <input type="text" id="inputName" placeholder="ex. John Smith" name="name">
+        </p>
+        <p>
+            Badge:
+            <input type="number" id="inputBadge" placeholder="ex. 123456" name="badge">
+        </p>
+        <p>
+            DOB:
+            <input type="date" id="inputDob" name="dob">
+        </p>
+        <p>
+            Are You Loved?:
+            <input type="checkbox" id="inputIsLoved" name="isloved">
+        </p>
+        <p>
+            <button type="submit" id="btnSubmit">submit</button>
+        </p>
+    </form>
+  </body>
+</html>
