@@ -1,2 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/airpair');
+
+var monoDblink = 'mongodb://localhost/airpair';
+
+mongoose.connect(monoDblink);
