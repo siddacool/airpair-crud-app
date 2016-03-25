@@ -109,18 +109,6 @@ li {
   list-style-type: disc;
 }
 
-li form {
-  display: inline-block;
-}
-
-li form ~ p {
-  display: inline-block;
-}
-
-li form ~ p a {
-  margin-left: 0.5rem;
-}
-
 form > p {
   margin: 1rem 0;
 }
@@ -144,4 +132,20 @@ button {
 
 button:hover {
   color: #e67e22;
+}
+
+table {
+  width: 100%;
+}
+
+td form {
+  display: inline-block;
+}
+
+td form ~ p {
+  display: inline-block;
+}
+
+td form ~ p a {
+  margin-left: 0.5rem;
 }

@@ -48,21 +48,8 @@ li{
     display: list-item;
     list-style-type: disc;
     
-    form{
-        display: inline-block;
-        
-        & ~ p{
-            display: inline-block;
-            
-            a{
-                margin-left: 0.5rem;
-            }
-        }
-        
-    }
-    
-    
 }
+
 
 form {
     >p{
@@ -76,4 +63,23 @@ ul{
 
 button{
     @include buttonPrimary;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    form{
+        display: inline-block;
+        
+        & ~ p{
+            display: inline-block;
+            
+            a{
+                margin-left: 0.5rem;
+            }
+        }
+        
+    }
 }

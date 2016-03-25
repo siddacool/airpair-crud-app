@@ -5,28 +5,29 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-   <div class="constrainBox">
+
         <h1><%= title %></h1>
-    <ul>
+    <table>
         <% blobs.forEach(function(blob){ %>
-           <li>
-             <p>
-               <span> <strong>  <%= blob.name %>  </strong></span>
-               <span><%= blob.badge %></span>
-               <span><%= blob.dob %></span>
-               <span><%= blob.isloved %></span>
-               <span><%= blob._id %></span>
-             </p>
-               <form action='/blobs/<%= blob._id %>/edit' method='post' enctype='application/x-www-form-urlencoded'>
+           <tr>
+               <td><strong> <a href='/blobs/<%= blob._id %>'> <%= blob.name %> </a> </strong></td>
+               <td><%= blob.badge %></td>
+               <td><%= blob.dob %></td>
+               <td><%= blob.isloved %></td>
+               <td><%= blob._id %></td>
+               
+               <td>
+                    <form action='/blobs/<%= blob._id %>/edit' method='post' enctype='application/x-www-form-urlencoded'>
                    <input type='hidden' value='DELETE' name='_method'>
                    <button type='submit'>Delete</button>
-               </form>
-               <p> <a href='/blobs/<%= blob._id %>/edit'>Edit </a> </p>
-               <p> <a href='/blobs/<%= blob._id %>'>Show</a> </p>
-           </li>
+                   </form>
+                   <p> <a href='/blobs/<%= blob._id %>/edit'>Edit </a> </p>
+               </td>
+              
+           </tr>
         <% }); %>
-    </ul>
-   </div>
+    </table>
+
    
   </body>
 </html>
