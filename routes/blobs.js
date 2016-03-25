@@ -5,6 +5,7 @@ var express = require('express'),
     methodOverride = require('method-override'); //used to manipulate POST
 
 
+// copied from method override page
 router.use(bodyParser.urlencoded({ extended: true }));
 
 router.use(methodOverride(function(req, res){
@@ -37,7 +38,7 @@ router.route('/')
                     },
                     //JSON response will show all blobs in JSON format
                     json: function(){
-                        res.json(infophotos);
+                        res.json(blobs);
                     }
                 });
               }     
