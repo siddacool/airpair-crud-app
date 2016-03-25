@@ -4,7 +4,8 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-    <h1>Blob ID <%= blob._id %></h1>
+   <div class="constrainBox">
+          <h1>Blob ID <%= blob._id %></h1>
     <form action='/blobs/<%= blob._id %>/edit' method='post' name='updateblob' enctype='application/x-www-form-urlencoded'>
        <p>
            Name:
@@ -31,5 +32,7 @@
            </button>
        </p>
     </form>
+   </div>
+   
   </body>
 </html>

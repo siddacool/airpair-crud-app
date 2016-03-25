@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+   <div class="constrainBox">
+        <h1><%= title %></h1>
     <form id="formAddBlob" name="addblob" method="post" action="/blobs">
         <p>
             Name:
@@ -27,5 +28,6 @@
             <button type="submit" id="btnSubmit">submit</button>
         </p>
     </form>
+   </div>
   </body>
 </html>

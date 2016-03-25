@@ -4,7 +4,8 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-    <h1> <%= blob.name %></h1>
+   <div class="constrainBox">
+          <h1> <%= blob.name %></h1>
     <p>
         Infophoto id: <strong> <%= blob._id %> </strong> 
     </p>
@@ -22,5 +23,7 @@
             false
         <% } %>
     </p>
+   </div>
+   
   </body>
 </html>

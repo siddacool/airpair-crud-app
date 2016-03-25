@@ -1,0 +1,119 @@
+/*-------------------- dependencies*/
+
+@import "dependencies/_functions";
+@import "dependencies/_colors";
+//-------------------- global variables//
+$baseFont: "Lucida Grande", Helvetica, Arial, sans-serif;
+$altFont: 'Avenir Book';
+$iconFont: 'FontAwesome';
+$baseColor: #f2f2f2;
+$fontColor: $flat-wetAsphalt;
+$fontAltColor: $flat-carrot;
+//user defined//
+
+/*-------------------- common stuff*/
+
+@mixin mainPadding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+@mixin flexMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flexMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flex {
+    display: flex;
+}
+%flexInline {
+    display: inline-flex;
+}
+.dbi {
+    display: block !important;
+}
+@mixin dbi {
+    display: block !important;
+}
+
+/*-------------------- user defined stuff*/
+
+@mixin resetAll {
+    body {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    button {
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: 0;
+        background: none;
+    }
+    a {
+        text-decoration: none;
+        margin: 0;
+        color: inherit;
+    }
+    ul,
+    ol,
+    li {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline-block;
+    }
+    :focus {
+        outline: 0;
+    }
+}
+
+/*link primary*/
+@mixin linkPrimary{
+    color: $fontAltColor;
+    
+    &:hover{
+        color: darken($fontAltColor,5%);
+        text-decoration: underline;
+    }
+}
+
+
+/*button primary*/
+
+@mixin buttonPrimary{
+    display: inline-flex;
+    height: 2rem;
+    padding: 0 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $baseColor;
+    color: $fontColor;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 400ms;
+    
+    &:hover{
+        color: $fontAltColor;
+    }
+}

@@ -1,0 +1,104 @@
+//functions.scss is a set of useful functions for scss project.
+//UPDATE : Feb 11 2016. Custom for this project only
+
+/*functions.scss_December/23/2015*/
+
+// px to rem converter
+@function px($value_px) {
+    $base_px_size: 16;
+    @return ($value_px / $base_px_size) + rem;
+}
+
+// margin middle
+@function centerIt($width_value) {
+    $width_valueHalf: $width_value/2;
+    @return calc(50% - #{$width_valueHalf});
+}
+
+// color functions
+// Add percentage of white to a color
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+// media queries mixin
+@mixin desktopXL {
+    @media only screen 
+    and (min-width: 1280px) { @content; }
+}
+@mixin desktop {
+    @media only screen 
+    and (min-width: 1025px) { @content; }
+}
+
+@mixin desktopMix {
+    @media only screen 
+    and (min-width: 1025px), 
+    screen and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: landscape) { @content; }
+}
+
+@mixin desktopMixEx {
+    @media only screen 
+    and (min-width: 1025px), 
+    screen and (min-device-width: 768px) 
+    and (max-device-width: 1024px), 
+    screen and (min-width: 641px) 
+    and (max-width: 1024px) { @content; }
+}
+
+@mixin tablet {
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px), 
+    screen and (min-width: 641px) 
+    and (max-width: 1024px) { @content;}
+}
+
+@mixin tabletPortrait {
+    @media only screen 
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) { @content; }
+}
+
+@mixin tabletLandscape {
+    @media only screen 
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape) { @content; }
+}
+
+@mixin mobileXL{
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px), 
+    screen and (max-width: 640px),
+    screen and (min-device-width: 768px)
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) { @content; }
+}
+
+@mixin mobile {
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px), 
+    screen and (max-width: 640px) { @content; }
+}
+
+@mixin mobileLandscape {
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (orientation: landscape) { @content; }
+}
+
+@mixin print {
+    @media print { @content;}
+}

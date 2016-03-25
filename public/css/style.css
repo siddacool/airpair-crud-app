@@ -1,8 +1,147 @@
+/*-------------------- dependencies*/
+/*-------------------- dependencies*/
+/*functions.scss_December/23/2015*/
+/*colors.scss_July/14/2015*/
+/*-------------------- common stuff*/
+.dbi {
+  display: block !important;
+}
+
+/*-------------------- user defined stuff*/
+/*link primary*/
+/*button primary*/
+/*-------------------- major DOM elements*/
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  background: none;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  margin: 0;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #34495e;
+  letter-spacing: 0.04rem;
+  line-height: 1.5rem;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+.constrainBox {
+  width: 100%;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*----------------------------------------------------------------------*/
+body {
+  padding: 50px;
+}
+
+a {
+  color: #e67e22;
+}
+
+a:hover {
+  color: #d67118;
+  text-decoration: underline;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+li {
+  display: list-item;
+  list-style-type: disc;
+}
+
+li form {
+  display: inline-block;
+}
+
+li form ~ p {
+  display: inline-block;
+}
+
+li form ~ p a {
+  margin-left: 0.5rem;
+}
+
+form > p {
+  margin: 1rem 0;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+button {
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  color: #34495e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+button:hover {
+  color: #e67e22;
 }

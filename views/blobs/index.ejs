@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+   <div class="constrainBox">
+        <h1><%= title %></h1>
     <ul>
         <% blobs.forEach(function(blob){ %>
            <li>
@@ -25,5 +26,7 @@
            </li>
         <% }); %>
     </ul>
+   </div>
+   
   </body>
 </html>
